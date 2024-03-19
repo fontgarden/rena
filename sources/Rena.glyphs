@@ -9,7 +9,16 @@ and the Bahá’í Faith
 
 Eli Heuer  ",
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz 1234567890 "
+abcdefghijklmnopqrstuvwxyz
+1234567890 ",
+"ABCDEFGHIJ
+KLMNOPQRS
+TUVWXYZ
+1234567890
+abcdefghijklm
+nopqrstuvwxyz
+Rena Regular",
+g
 );
 date = "2024-03-09 04:58:48 +0000";
 familyName = Rena;
@@ -907,7 +916,9 @@ unicode = 81;
 {
 color = 5;
 glyphname = R;
-lastChange = "2024-03-15 18:35:07 +0000";
+kernLeft = R;
+kernRight = R;
+lastChange = "2024-03-19 17:15:06 +0000";
 layers = (
 {
 layerId = m01;
@@ -1694,7 +1705,9 @@ unicode = 101;
 {
 color = 5;
 glyphname = f;
-lastChange = "2024-03-15 06:20:33 +0000";
+kernLeft = f;
+kernRight = f;
+lastChange = "2024-03-19 17:15:16 +0000";
 layers = (
 {
 layerId = m01;
@@ -1745,7 +1758,9 @@ unicode = 102;
 {
 color = 5;
 glyphname = g;
-lastChange = "2024-03-15 06:32:26 +0000";
+kernLeft = g;
+kernRight = g;
+lastChange = "2024-03-19 22:27:56 +0000";
 layers = (
 {
 layerId = m01;
@@ -2457,7 +2472,7 @@ color = 5;
 glyphname = t;
 kernLeft = t;
 kernRight = t;
-lastChange = "2024-03-14 05:28:30 +0000";
+lastChange = "2024-03-19 16:40:14 +0000";
 layers = (
 {
 layerId = m01;
@@ -2481,10 +2496,10 @@ nodes = (
 (360,576,l),
 (240,576,l),
 (224,592,l),
-(224,720,l),
-(208,736,l),
-(128,736,l),
-(112,720,l),
+(224,672,l),
+(208,688,l),
+(128,688,l),
+(112,672,l),
 (112,592,l),
 (96,576,l),
 (24,576,l),
@@ -3564,6 +3579,9 @@ m01 = {
 "@MMK_R_A" = -128;
 "@MMK_R_a" = -48;
 };
+"@MMK_L_R" = {
+"@MMK_R_o" = -64;
+};
 "@MMK_L_a" = {
 "@MMK_R_o" = -8;
 "@MMK_R_quoteright" = -96;
@@ -3571,6 +3589,9 @@ m01 = {
 };
 "@MMK_L_c" = {
 "@MMK_R_colon" = -16;
+};
+"@MMK_L_f" = {
+"@MMK_R_g" = -48;
 };
 "@MMK_L_quoteright" = {
 iacute = -16;
