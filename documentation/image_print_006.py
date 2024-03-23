@@ -94,15 +94,35 @@ def draw_main_text():
         (MARGIN, MARGIN, MARGIN * 6, MARGIN * 14),
         align="left",
     )
+    db.fontSize(72 * 2)
+    db.textBox(
+        "HHHOOOHHHOOO\nHHHHOHOHOOOO\nnnnnononoooo",
+        (MARGIN, MARGIN, MARGIN * 6, MARGIN * 9.1),
+        align="left",
+    )
+    db.fontSize(72)
     db.textBox(
         "nnnnnnnnnnnn oooooooooooo\noooooooooooo nnnnnnnnnnnn\nnnnnononoooo oooonononnnn\noooonononnnn nnnnononoooo\nHHHHHHHHHHHH OOOOOOOOOOOO\nOOOOOOOOOOOO HHHHHHHHHHHH\nHHHHOHOHOOOO OOOOHOHOHHHH\nOOOOHOHOHHHH HHHHOHOHOOOO\nHHnnHOHOnnOO HHooHOHOooOO\nnnHHHOHOOOnn OOooHOHOHHoo\nnnHHnonoHHoo nnOOnonoOOoo\nnnanonoaoo uuanonoaoo\nuuannonooaoo HHAHOHOAOO",
         (MARGIN, MARGIN, MARGIN * 6, MARGIN * 7),
         align="left",
     )
+    db.fontSize(72 * 2)
+    db.textBox(
+        "HHHHOHOHOOOO\nnnnnononoooo",
+        (MARGIN, MARGIN, MARGIN * 6, MARGIN * 2),
+        align="left",
+    )
     db.fontSize(72)
+    LONG_TEXT_001 = "HHHOOO OOOHHH HOHOHO OHOHOH HHHHHH OOOOOO"
+    LONG_TEXT_002 = "nnnooo ooonnn nonono ononon nnnnnn oooooo"
+    db.textBox(
+        (LONG_TEXT_001 * 5) + (LONG_TEXT_002 * 5),
+        (MARGIN * 8, MARGIN, MARGIN * 6, MARGIN * 14),
+        align="left",
+    )
     db.textBox(
         "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air. Primitive attempts at digital monetization try to create an artificial scarcity through paywalls and DRM, technically ineffective against any piracy but backed by socialized pressure and threats of legal action. These models of course restrict the free flow of information and suppress the memetic cultural nature of fonts as an art form. NFT’s are an alternative form of creating artificial digital scarcity, so it’s easy to make the intuitive leap that they also negatively limit free information. However, by changing the value proposition of digital goods from a scarcity based on limiting information access to one based on provable provenance, they have no need to rely on gatekeeping access to NFT content to secure value. Digital scarcity instituted by legal infrastructure was an awkward, artificial, and ethically problematic intervention on the free flow of information; NFTs managing scarcity as trustless bookkeeping allows accessibility to be achieved without undermining production incentives. NFT’s solve the problem of trustless digital deeds of ownership, making the need to conflate ownership with content accessibility in copyable digital media outmoded—and with it, convoluted and invasive DRM solutions, unclear licensing rights and likely one day, paywalling altogether.",
-        (MARGIN * 8, MARGIN, MARGIN * 6, MARGIN * 14),
+        (MARGIN * 8, MARGIN, MARGIN * 6, MARGIN * 8),
         align="left",
     )
 
