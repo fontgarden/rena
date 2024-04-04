@@ -47,7 +47,11 @@ Crypto solves the problem of trustless digital deeds of ownership, making the ne
 "
 Crypto and Free Information 001
 
-Money is not impure, it’s information. Prices communicate knowledge and complex economies build culture. The issue with monetization on the old internet is there wasn’t enough, it wasn’t integrated natively. The new internet will be hyperfinancialized. 
+Money is not impum  re, it’s information. Prices communicate knowledge and complexoxox oxoxox economies build culture. The issue with monetization on the old internet is there wasn’t enough,x it wasn’t integrated natively. The new internet will be hyperfinancialized. 
+
+NHOnono 
+
+
 "
 );
 date = "2024-03-09 04:58:48 +0000";
@@ -3040,7 +3044,7 @@ color = 5;
 glyphname = x;
 kernLeft = x;
 kernRight = x;
-lastChange = "2024-04-03 04:34:10 +0000";
+lastChange = "2024-04-04 19:09:55 +0000";
 layers = (
 {
 layerId = m01;
@@ -3048,30 +3052,77 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(84,0,l),
-(248,212,l),
-(268,212,l),
-(428,0,l),
-(476,0,l),
-(492,16,l),
-(492,80,l),
-(484,96,l),
-(332,280,l),
-(332,296,l),
-(472,480,l),
-(480,496,l),
-(480,560,l),
-(464,576,l),
-(420,576,l),
-(268,368,l),
-(248,368,l),
+(76,0,l),
+(260,220,l),
+(276,220,l),
+(456,0,l),
+(504,0,l),
+(520,16,l),
+(520,80,l),
+(512,96,l),
+(340,292,l),
+(340,308,l),
+(492,480,l),
+(500,496,l),
+(500,560,l),
+(484,576,l),
+(440,576,l),
+(272,372,l),
+(256,372,l),
 (96,576,l),
 (52,576,l),
 (36,560,l),
 (36,496,l),
 (44,480,l),
-(184,296,l),
-(184,280,l),
+(192,300,l),
+(192,284,l),
+(24,96,l),
+(16,80,l),
+(16,16,l),
+(32,0,l)
+);
+}
+);
+width = 536;
+},
+{
+associatedMasterId = m01;
+layerId = "E0C175E4-24A6-4BF2-9904-230F6FBDD65D";
+name = "Apr 4, 24 at 11:54";
+shapes = (
+{
+closed = 1;
+nodes = (
+(472,0,l),
+(520,0,l),
+(536,16,l),
+(536,80,l),
+(528,96,l),
+(104,576,l),
+(60,576,l),
+(44,560,l),
+(44,496,l),
+(52,480,l)
+);
+}
+);
+visible = 1;
+width = 560;
+},
+{
+associatedMasterId = m01;
+layerId = "33405C69-6162-4869-B6AD-AD96D677EE7A";
+name = "Apr 4, 24 at 11:55";
+shapes = (
+{
+closed = 1;
+nodes = (
+(84,0,l),
+(508,480,l),
+(516,496,l),
+(516,560,l),
+(500,576,l),
+(456,576,l),
 (32,96,l),
 (24,80,l),
 (24,16,l),
@@ -3079,7 +3130,8 @@ nodes = (
 );
 }
 );
-width = 516;
+visible = 1;
+width = 560;
 }
 );
 unicode = 120;
@@ -3838,11 +3890,11 @@ unicode = 57;
 },
 {
 glyphname = space;
-lastChange = "2024-04-02 05:41:01 +0000";
+lastChange = "2024-04-04 21:34:16 +0000";
 layers = (
 {
 layerId = m01;
-width = 224;
+width = 256;
 }
 );
 unicode = 32;
@@ -4182,7 +4234,7 @@ m01 = {
 "@MMK_R_comma" = -16;
 "@MMK_R_f" = -40;
 "@MMK_R_t" = -32;
-"@MMK_R_x" = -24;
+"@MMK_R_x" = -16;
 "@MMK_R_y" = -8;
 };
 "@MMK_L_quoteright" = {
@@ -4209,6 +4261,9 @@ iacute = -16;
 };
 "@MMK_L_w" = {
 "@MMK_R_a" = -32;
+};
+"@MMK_L_x" = {
+"@MMK_R_o" = -16;
 };
 "@MMK_L_y" = {
 "@MMK_R_comma" = -96;
