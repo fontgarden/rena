@@ -2249,7 +2249,7 @@ color = 5;
 glyphname = k;
 kernLeft = k;
 kernRight = k;
-lastChange = "2024-03-31 04:00:56 +0000";
+lastChange = "2024-04-05 01:06:16 +0000";
 layers = (
 {
 layerId = m01;
@@ -2272,7 +2272,7 @@ nodes = (
 (512,504,l),
 (512,560,l),
 (496,576,l),
-(460,576,l),
+(456,576,l),
 (184,292,l),
 (168,292,l),
 (168,784,l),
@@ -4152,7 +4152,7 @@ color = 5;
 glyphname = quoteright;
 kernLeft = quoteright;
 kernRight = quoteright;
-lastChange = "2024-04-03 03:58:41 +0000";
+lastChange = "2024-04-05 00:51:33 +0000";
 layers = (
 {
 layerId = m01;
@@ -4226,7 +4226,7 @@ m01 = {
 "@MMK_R_o" = -40;
 };
 "@MMK_L_n" = {
-"@MMK_R_quoteright" = -64;
+"@MMK_R_quoteright" = -48;
 "@MMK_R_t" = -16;
 "@MMK_R_y" = -16;
 };
@@ -4238,8 +4238,8 @@ m01 = {
 "@MMK_R_y" = -8;
 };
 "@MMK_L_quoteright" = {
-"@MMK_R_s" = -112;
-"@MMK_R_t" = -16;
+"@MMK_R_s" = -96;
+"@MMK_R_t" = -8;
 iacute = -16;
 };
 "@MMK_L_r" = {

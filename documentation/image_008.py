@@ -16,6 +16,7 @@ AUXILIARY_FONT = "Helvetica"
 
 # Toggle this for a grid overlay
 GRID_VIEW = True  # Toggle this for a grid overlay
+GRID_VIEW = False  # Toggle this for a grid overlay
 
 # Handel the "--output" flag
 # For example: $ python3 documentation/image1.py --output documentation/image1.png
@@ -62,10 +63,9 @@ def remap(value, inputMin, inputMax, outputMin, outputMax):
 # Draw the page/frame and a grid if "GRID_VIEW" is set to "True"
 def draw_background():
     db.newPage(WIDTH, HEIGHT)
-    db.fill(0.2)
-    db.fill(0.025)
-    db.fill(0, 0, 1)
-    db.rect(-2, -2, WIDTH + 2, HEIGHT + 2)
+    db.fill(0.3)
+    db.fill(0.012, 0.22, 0.96)
+    db.rect(0, 0, WIDTH, HEIGHT)
     if GRID_VIEW:
         grid()
     else:
@@ -73,50 +73,120 @@ def draw_background():
 
 
 # Draw main text
-GRID_VIEW = False  # Toggle this for a grid overlay
 
 
 def draw_main_text_001():
+    # db.image("documentation/auxiliary-images/cb-blue.png", (0, 0), alpha=1.0)
+    db.fill(1)
+    db.stroke(None)
+    db.font(MAIN_FONT_PATH)
+    db.fontSize(159)
+    db.fontSize(165)
+    db.fontSize(200)
+    db.lineHeight(200 * 1.115)
+    # db.tracking(None)
+    db.textBox(
+        "Money is not impure, it’s information. Prices communicate knowledge and complex economies build culture. \nThe issue with monetization on the\nold internet is there wasn’t enough,\nit wasn’t integrated natively. The new internet will be hyperfinancialized.",
+        (MARGIN, MARGIN - (1850), MARGIN * 14, MARGIN * 14),
+        align="left",
+    )
+    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.37))
+    db.text("001", (MARGIN * 13.75, MARGIN * 14.37))
+
+
+def draw_main_text_00():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
-    db.fontSize(512 + 32)
     db.fontSize(159)
-    db.lineHeight(160 * 1.12)
-    # db.tracking(3)
+    db.fontSize(165)
+    # db.lineHeight(160 * 1.2)
+    db.tracking(3)
     db.textBox(
-        "\n\n\n\n\nThe problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air.  Primitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically ineffective against any piracy but backed by socialized pressure and threats of legal action. These models of course unethically restrict the free flow of information. \n\n\n\n NFT’s are an alternative form of creating artificial digital scarcity, so it’s easy to make the intuitive leap that they also negatively limit free information. However, by changing the value proposition of digital goods from a scarcity based on limiting information access to one based on provable provenance, they have no need to rely on gatekeeping access to NFT content to secure value. This is a great boon for the freedom of information movement. \n\n ",
-        (MARGIN, MARGIN - (256 + 490), MARGIN * 14, MARGIN * 14),
+        "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air.  Primitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically ineffective against any piracy but backed by socialized pressure and threats of legal action. These models of course unethically restrict the free flow of information.",
+        (MARGIN, MARGIN - (1610), MARGIN * 14.2, MARGIN * 14),
         align="left",
     )
     db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
-    # db.rect(MARGIN * 8, MARGIN, MARGIN * 7, MARGIN * 4)
 
 
 def draw_main_text_002():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
+    GRID_VIEW = False  # Toggle this for a grid overlay
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
-    db.fontSize(512 + 32)
-    db.fontSize(152)
-    # db.lineHeight(120)
-    db.tracking(2)
+    db.fontSize(159)
+    db.fontSize(165)
+    # db.lineHeight(165 * 1.2)
+    db.tracking(1)
     db.textBox(
-        "\n\n\n\n\n\nMemecoins and NFT’s are an alternative form of creating artificial digital scarcity, so it’s easy to make the intuitive leap that they also negatively limit free information. However, by changing the value proposition of digital goods from a scarcity based on limiting information access to one based on provable provenance, they have no need to rely on gatekeeping access to NFT content to secure value. This is a great boon for the freedom of information movement. \n\n ",
-        (MARGIN, MARGIN - (256 + 56), MARGIN * 13, MARGIN * 14),
+        "NFT’s and memecoins are an alternative form of creating artificial digital scarcity, so it’s easy to make the intuitive leap that they also negatively limit free information. However, by changing the value proposition of digital goods from a scarcity based on limiting information access to one based on provable provenance, they have no need to rely on gatekeeping access to content to secure value. This is a great boon for the freedom of information movement.",
+        (MARGIN, MARGIN - (1155), MARGIN * 13.4, MARGIN * 14),
         align="left",
     )
     db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
-    # db.rect(MARGIN * 8, MARGIN, MARGIN * 7, MARGIN * 4)
+
+
+def draw_main_text_003():
+    # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
+    GRID_VIEW = False  # Toggle this for a grid overlay
+    db.fill(1)
+    db.stroke(None)
+    db.font(MAIN_FONT_PATH)
+    db.fontSize(159)
+    db.fontSize(165)
+    # db.lineHeight(165 * 1.2)
+    db.tracking(1)
+    db.textBox(
+        "Blockchain is a naturalistic technology, it would have been developed in a thousand timelines, just as the CPU would have, just as double book accounting or abstracted money would have—or AI will—but copyright law was a confusing and awkward historical aberration.",
+        (MARGIN, MARGIN - (2285), MARGIN * 14, MARGIN * 14),
+        align="left",
+    )
+    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
+
+
+def draw_main_text_004():
+    # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
+    GRID_VIEW = False  # Toggle this for a grid overlay
+    db.fill(1)
+    db.stroke(None)
+    db.font(MAIN_FONT_PATH)
+    db.fontSize(159)
+    db.fontSize(165)
+    # db.lineHeight(165 * 1.2)
+    db.tracking(1)
+    db.textBox(
+        "Digital scarcity instituted by legal infrastructure was an awkward, artificial and ethically problematic intervention on the free flow of information; NFTs managing scarcity as a trustless bookkeeping allows accessibility to be achieved without undermining production incentives.",
+        (MARGIN, MARGIN - (2000), MARGIN * 13.5, MARGIN * 14),
+        align="left",
+    )
+    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
+
+
+def draw_main_text_005():
+    # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
+    GRID_VIEW = False  # Toggle this for a grid overlay
+    db.fill(1)
+    db.stroke(None)
+    db.font(MAIN_FONT_PATH)
+    db.fontSize(159)
+    db.fontSize(165)
+    # db.lineHeight(165 * 1.2)
+    db.tracking(1)
+    db.textBox(
+        "Crypto solves the problem of trustless digital deeds of ownership, making the need to conflate ownership with content accessibility in copyable digital media outmoded—and with it, convoluted and invasive DRM solutions, unclear licensing rights and likely one day, paywalling altogether.",
+        (MARGIN, MARGIN - (2000), MARGIN * 14, MARGIN * 14),
+        align="left",
+    )
+    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
 
 
 # Build and save the image
 if __name__ == "__main__":
     draw_background()
     draw_main_text_001()
-    # draw_main_text_002()
     # Save output, using the "--output" flag location
     db.saveImage(args.output)
     # Print done in the terminal
