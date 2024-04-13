@@ -80,8 +80,6 @@ def draw_main_text_001():
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
-    db.fontSize(159)
-    db.fontSize(165)
     db.fontSize(200)
     db.lineHeight(200 * 1.115)
     # db.tracking(None)
@@ -94,26 +92,30 @@ def draw_main_text_001():
     db.text("001", (MARGIN * 13.75, MARGIN * 14.37))
 
 
-def draw_main_text_00():
+def draw_main_text_002():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
-    db.fontSize(159)
-    db.fontSize(165)
-    # db.lineHeight(160 * 1.2)
-    db.tracking(3)
+    # db.fontSize(200)
+    db.fontSize(206)
+    # db.lineHeight(200 * 1.110)
+    db.lineHeight(200 * 1.110)
+    db.tracking(2)
+    # db.tracking(None)
     db.textBox(
-        "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air.  Primitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically ineffective against any piracy but backed by socialized pressure and threats of legal action. These models of course unethically restrict the free flow of information.",
-        (MARGIN, MARGIN - (1610), MARGIN * 14.2, MARGIN * 14),
+        # "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air. Prim-\nitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically in-\neffective against any piracy but backed by socialized pressure and threats of legal action. These models of course unethically restrict the free flow of information.",
+        # "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air. Prim-\nitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically in-\neffective against any piracy but backed by socialized pressure and threats of legal action.",
+        "The problem of monetizing digital content is reproducible information is effectively infinite in supply, leaving it impossible to price, free like air. Primitive attempts at digital monetization try to create artificial scarcity through paywalls and DRM, technically ineffective against any piracy but backed by socialized pressure and threats of legal action.",
+        (MARGIN, MARGIN - (1090), MARGIN * 14, MARGIN * 14),
         align="left",
     )
-    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
+    db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.37))
+    db.text("002", (MARGIN * 13.5, MARGIN * 14.37))
 
 
-def draw_main_text_002():
+def draw_main_text_003():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
-    GRID_VIEW = False  # Toggle this for a grid overlay
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
@@ -129,7 +131,7 @@ def draw_main_text_002():
     db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
 
 
-def draw_main_text_003():
+def draw_main_text_004():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
     GRID_VIEW = False  # Toggle this for a grid overlay
     db.fill(1)
@@ -147,7 +149,7 @@ def draw_main_text_003():
     db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
 
 
-def draw_main_text_004():
+def draw_main_text_005():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
     GRID_VIEW = False  # Toggle this for a grid overlay
     db.fill(1)
@@ -165,7 +167,7 @@ def draw_main_text_004():
     db.text("Crypto and Free Information", (MARGIN, MARGIN * 14.5))
 
 
-def draw_main_text_005():
+def draw_main_text_006():
     # db.image("documentation/auxiliary-images/bg_001.png", (0, 0), alpha=1.0)
     GRID_VIEW = False  # Toggle this for a grid overlay
     db.fill(1)
@@ -186,7 +188,7 @@ def draw_main_text_005():
 # Build and save the image
 if __name__ == "__main__":
     draw_background()
-    draw_main_text_001()
+    draw_main_text_002()
     # Save output, using the "--output" flag location
     db.saveImage(args.output)
     # Print done in the terminal
