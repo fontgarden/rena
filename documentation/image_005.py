@@ -33,7 +33,7 @@ ttFont = TTFont(MAIN_FONT_PATH)
 # Draws a grid
 def grid():
     """Draws a grid using DrawBot-Skia"""
-    db.stroke(1, 1, 1, 0.5)
+    db.stroke(1, 1, 1, 0.1)
     db.fill(None)
     db.strokeWidth(2)
     step_x = 0
@@ -63,7 +63,9 @@ def remap(value, inputMin, inputMax, outputMin, outputMax):
 # Draw the page/frame and a grid if "GRID_VIEW" is set to "True"
 def draw_background():
     db.newPage(WIDTH, HEIGHT)
+    db.fill(0.075)
     db.fill(0.1)
+    db.fill(0.12)
     # db.fill(0.012, 0.22, 0.96) # Based Blue
     db.rect(0, 0, WIDTH, HEIGHT)
     if GRID_VIEW:
@@ -76,19 +78,21 @@ def draw_background():
 def draw_main_text_001():
     db.image(
         "documentation/auxiliary-images/gnu-pepe.png",
-        (256 + 32, -256 - 32 - 32),
-        alpha=1.0,
+        # (256 + 32, -256 - 32 - 32),
+        (-(1024 + 512 - 256 + 64 + 16 + 8 + 4 + 2 + 2), -(1024 + 512 + 256)),
+        alpha=0.8,
     )
     db.fill(1)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
-    db.fontSize(512 + 64)
+    db.fontSize(512 + 64 - 8)
     # db.lineHeight(200 * 1.115)
-    # db.tracking(None)
-    db.text("Die GNU", (MARGIN, MARGIN * 13))
-    db.text("Typographie", (MARGIN, MARGIN * 11))
-    db.fontSize(256 + 32)
-    db.text("001", (MARGIN, MARGIN * 1))
+    # db.tracking(-8)
+    db.tracking(None)
+    db.text("Die GNU", (MARGIN - 31, MARGIN * 13.23))
+    db.text("Typographie", (MARGIN - 4, MARGIN * 11.23))
+    # db.fontSize(256 + 32)
+    db.text("001", (MARGIN - 32, MARGIN * 1))
 
 
 # Build and save the image
