@@ -74,14 +74,24 @@ def draw_image():
         print((axis, data))
 
     # Main text
-    db.fontSize(300)
+    FS = 262.5
+    db.fontSize(FS)
     db.fontVariations(opsz=MAIN_TEXT_OPSZ)
-    db.text("Mark Tobey", (M+(U*0), M+(U*40)-(U*2)))
-    db.text("Working Man, 1942", (M+(U*0.15), M+(U*35)-(U*2)))
-    db.text("Gouache on board.", (M+(U*0), M+(U*25)-(U*2)))
-    db.text("Eugene Fuller", (M+(U*0), M+(U*20)-(U*2)))
-    db.text("Memorial Collection", (M+(U*0), M+(U*15)-(U*2)))
-    db.text("Seattle Art Museum", (M+(U*0), M+(U*10)-(U*2)))
+    db.text("يا باب الباب", (M+(U*0), M+(U*42.5)-(U*2)))
+    db.text("Ya báb al-báb", (M+(U*24.1), M+(U*42.5)-(U*2)))
+    db.text("أشهد يا إلهي", (M+(U*0), M+(U*35.5)-(U*2)))
+    db.text("Ashadu ya ilahi", (M+(U*21.4), M+(U*35.5)-(U*2)))
+    db.text("يا باب الباب", (M+(U*0), M+(U*28.5)-(U*2)))
+    db.text("Ya báb al-báb", (M+(U*24.1), M+(U*28.5)-(U*2)))
+    db.text("أشهد يا إلهي", (M+(U*0), M+(U*21.5)-(U*2)))
+    db.text("Ashadu ya ilahi", (M+(U*21.4), M+(U*21.5)-(U*2)))
+    db.text("يا باب الباب", (M+(U*0), M+(U*14.5)-(U*2)))
+    db.text("Ya báb al-báb", (M+(U*24.1), M+(U*14.5)-(U*2)))
+    db.text("أشهد يا إلهي", (M+(U*0), M+(U*7.5)-(U*2)))
+    db.text("Ashadu ya ilahi", (M+(U*21.4), M+(U*7.5)-(U*2)))
+    db.lineHeight(None)
+    db.lineHeight(FS*1.0)
+    # db.textBox("I deleted my sunscreen post because I didn't like my tone and thought the post could have been better. But I haven't forgotten sunscreen. I will be back with an even better anti-sunscreen post. Soon.", (M, M-(U*7), W-(M*1.75), W-(M*2)), align="left")
 
     # Auxillary text
     db.fontSize(80)
@@ -89,7 +99,7 @@ def draw_image():
     db.text("github.com/fontgarden/rena", (M-(U*0.1), M+(U*0)))
     db.text("Open Font License OFL v1.1", (M+(U*30.5), M+(U*0)))
     db.text(f"Rena Regular: opsz {MAIN_TEXT_OPSZ}", (M-(U*0.1), M+(U*47)))
-    db.text(f"Pre-Alpha: a340aae {FORMATTED_DATE}", (M+(U*27.4), M+(U*47)))
+    db.text(f"Pre-Alpha: 1b93ba1 {FORMATTED_DATE}", (M+(U*28.2), M+(U*47)))
 
     # Horizontal divider lines
     db.stroke(1, 1, 1, 1.0)
