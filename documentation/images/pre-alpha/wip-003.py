@@ -13,7 +13,7 @@ MAIN_FONT_PATH = "fonts/RenaVF.ttf"
 MAIN_TEXT_OPSZ = 144
 CURRENT_DATE = datetime.now()
 FORMATTED_DATE = CURRENT_DATE.strftime("%d-%m-%Y")
-GRID_VIEW = False
+GRID_VIEW = True
 
 # Handel the "--output" flag
 # For example: $ python3 documentation/image1.py --output documentation/image1.png
@@ -41,6 +41,9 @@ def grid():
         step_y += increment_y
     db.polygon((W / 2, 0), (W / 2, H))
     db.polygon((0, H / 2), (W, H / 2))
+    db.stroke(1, 0, 0, 0.5)
+    db.fill(None)
+    db.rect(M, M+(U*8), W-(M*2), H-(M*2)-(U*16))
 
 
 # Remap input range to VF axis range

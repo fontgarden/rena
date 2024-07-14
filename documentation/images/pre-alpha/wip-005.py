@@ -27,7 +27,7 @@ ttFont = TTFont(MAIN_FONT_PATH)
 
 # Draws a grid
 def grid():
-    db.stroke(1, 1, 1, 0.15)
+    db.stroke(1, 1, 1, 0.125)
     db.strokeWidth(2)
     step_x = 0
     step_y = 0
@@ -41,6 +41,9 @@ def grid():
         step_y += increment_y
     db.polygon((W / 2, 0), (W / 2, H))
     db.polygon((0, H / 2), (W, H / 2))
+    db.stroke(1, 0, 0, 0.5)
+    db.fill(None)
+    db.rect(M, M+(U*8), W-(M*2), H-(M*2)-(U*16))
 
 
 # Remap input range to VF axis range
@@ -57,6 +60,7 @@ def remap(value, inputMin, inputMax, outputMin, outputMax):
 def draw_background():
     db.newPage(W, H)
     db.fill(0.025)
+    db.fill(0.03)
     db.rect(-2, -2, W + 2, H + 2)
     if GRID_VIEW:
         grid()
@@ -67,6 +71,7 @@ def draw_background():
 # Draw image
 def draw_image():
     db.fill(0.975)
+    db.fill(0.9)
     db.stroke(None)
     db.font(MAIN_FONT_PATH)
     db.tracking(None)
@@ -74,28 +79,30 @@ def draw_image():
         print((axis, data))
 
     # Main text
-    FS = 240
+    FS = 262.5
     db.fontSize(FS)
     db.fontVariations(opsz=MAIN_TEXT_OPSZ)
-    db.text("يا باب الباب", (M+(U*20), M+(U*40)-(U*2)))
-    db.text("Hello World", (M+(U*0), M+(U*40)-(U*2)))
-    db.text("أشهد يا إلهي بأنّك خلقتني", (M+(U*0), M+(U*30)-(U*2)))
-    db.text("أشهد يا إلهي بأنّك خلقتني", (M+(U*0), M+(U*20)-(U*2)))
-    db.text("أشهد يا إلهي بأنّك خلقتني", (M+(U*0), M+(U*10)-(U*2)))
+    db.text("أشهـــــــــد يا إلهي بأنّك خلقتني", (M+(U*0.1), M+(U*39)-(U*2)))
+    db.text("لعرفانك وعبادتك", (M+(U*0.1), M+(U*32)-(U*2)))
+    db.text("أشهـــــــــد يا إلهي بأنّك خلقتني", (M+(U*0.1), M+(U*25)-(U*2)))
+    db.text("أشهـــــــــد يا إلهي بأنّك خلقتني", (M+(U*0.1), M+(U*18)-(U*2)))
+    db.text("أشهـــــــــد يا إلهي بأنّك خلقتني", (M+(U*0.1), M+(U*11)-(U*2)))
     db.lineHeight(None)
     db.lineHeight(FS*1.0)
     # db.textBox("I deleted my sunscreen post because I didn't like my tone and thought the post could have been better. But I haven't forgotten sunscreen. I will be back with an even better anti-sunscreen post. Soon.", (M, M-(U*7), W-(M*1.75), W-(M*2)), align="left")
 
     # Auxillary text
+    db.fill(0.5)
     db.fontSize(80)
     db.fontVariations(opsz=14)
     db.text("github.com/fontgarden/rena", (M-(U*0.1), M+(U*0)))
     db.text("Open Font License OFL v1.1", (M+(U*30.5), M+(U*0)))
-    db.text(f"Rena Regular: opsz {MAIN_TEXT_OPSZ}", (M-(U*0.1), M+(U*47)))
-    db.text(f"Pre-Alpha: a340aae {FORMATTED_DATE}", (M+(U*27.4), M+(U*47)))
+    db.text(f"Rena Regular Arabic: opsz {MAIN_TEXT_OPSZ}", (M-(U*0.1), M+(U*47)))
+    db.text(f"Pre-Alpha: 6c44e53 {FORMATTED_DATE}", (M+(U*27.2), M+(U*47)))
 
     # Horizontal divider lines
     db.stroke(1, 1, 1, 1.0)
+    db.stroke(0.5)
     db.strokeWidth(8)
     db.polygon((M, M+(U*2)), (W-M, M+(U*2)))
     db.polygon((M, M+(U*46)), (W-M, M+(U*46)))
