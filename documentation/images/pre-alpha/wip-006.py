@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 # Width, Height, Margin, Unit, Frames
-W, H, M, U, F = 1080*2, 1080*2, 120, 30, 50
+W, H, M, U, F = 1080*2, 1080*2, 120, 60, 50
 MAIN_FONT_PATH = "fonts/RenaVF.ttf"
 MAIN_TEXT_OPSZ = 144
 CURRENT_DATE = datetime.now()
@@ -101,22 +101,23 @@ db.openTypeFeatures(dlig=False)
 #for axis, data in db.listFontVariations().items():
 #   print((axis, data))
 
-db.fontSize(200)
 #db.fill(0.03)
 #db.rect(0,0,W,U*5+1)
-db.fill(0.8)
-TOP_ROW = 58
-db.text("abcdefghijklmnop", (M+(U*1), M+(U*(TOP_ROW-0))), align="left")
-db.text("qrstuvwxyz.,:;(){}[]", (M+(U*1), M+(U*(TOP_ROW-7))), align="left")
-db.text("ABCDEFGHIJKLM", (M+(U*1), M+(U*(TOP_ROW-14))), align="left")
-db.text("NOPQRSTUVWXYZ", (M+(U*1), M+(U*(TOP_ROW-21))), align="left")
-db.text("1234567890&", (M+(U*1), M+(U*(TOP_ROW-28))), align="left")
-db.text("àáâãäå", (M+(U*1), M+(U*(TOP_ROW-35))), align="left")
-db.text("Bahá’í Faith", (M+(U*1), M+(U*(TOP_ROW-42))), align="left")
-db.text("OPEN DESIGN NOW", (M+(U*1), M+(U*(TOP_ROW-49))), align="left")
-db.text("Eli Heuer", (M+(U*1), M+(U*(TOP_ROW-56))), align="left")
-#db.text("Bahá’í Faith", (M+(U*0), M+(U*12)), align="left")
-#db.text("Eli Heuer", (M+(U*0), M+(U*2)), align="left")
+db.fill(0.75)
+TOP_ROW = 29
+#db.rect(M+(U*0),M+(U*0), U*32, U*24)
+db.fontSize(200)
+db.text("Commentary on the", (M+(U*0), M+(U*(TOP_ROW-0))), align="left")
+db.text("Surah of the Sun", (M+(U*0), M+(U*(TOP_ROW-3.5))), align="left")
+
+LONG_TEXT_001 = "In the Name of God, the Merciful, the Compassionate.\n\nPraise be to God, Who hath set the dove of eloquence, perched among the twigs of the tree of explanation, to weaving her divers melodies. Her lyrics tell of how there is no God but God, Who hath brought new beings into existence, and created the contingent world by means of His Primal Will, whereby He hath caused to exist all that was and yet shall be. May God be glorified, Who hath embellished the heavens of reality with the sun of metaphorical meanings and mystical insight, as inscribed by the Pen of the Most High. Sovereignty belongeth to God, the Omnipotent, the Help in Peril, the Self-Subsisting. He hath brought forth the Most Great Ocean, which uniteth in itself the waters flowing from the spring of the letter H, which flow into the Most Ancient Name, from which the Primal Point was separated off, and whereby the unifying Word hath become manifest and both spiritual truth and religious law were revealed. The upholders of the divine unity broke through its surface and soared up into the heavens of ecstasy and divine presence. The sincere ones thus attained the beatific vision of their Lord, the All-Glorious, the Devoted Friend."
+db.fontSize(64)
+db.fontVariations(opsz=56)
+db.fontVariations(wght=400)
+db.openTypeFeatures(dlig=False)
+db.lineHeight(64*1.25)
+db.textBox(LONG_TEXT_001,(M+(U*0),M-(U*1), U*32, U*22), align="left")
+
 
 db.saveImage(args.output)
 print("DrawBot: Done\n")
