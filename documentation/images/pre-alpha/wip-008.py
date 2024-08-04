@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 # Width, Height, Margin, Unit, Frames
-W, H, M, U, F = 1080*2, 1080*2, 120, 30, 50
+W, H, M, U, F = 1080*2, 1080*2, 120, 60, 50
 MAIN_FONT_PATH = "fonts/RenaVF.ttf"
 MAIN_TEXT_OPSZ = 144
 CURRENT_DATE = datetime.now()
@@ -101,25 +101,34 @@ db.openTypeFeatures(dlig=False)
 #for axis, data in db.listFontVariations().items():
 #   print((axis, data))
 
-db.fontSize(195)
-#db.fill(0.03)
-#db.rect(0,0,W,U*5+1)
+db.fill(0.6, 0.05, 0.0)
+db.fill(0.6, 0.05, 0.0)
+db.fill(None)
+db.strokeWidth(12)
+db.stroke(0.9, 0.05, 0.0)
+#db.rect(W/4,H/4,W/2,H/2)
+TOP_ROW = 24
+#db.text("“I think true modernists ", (M+(U*(0.65)), M+(U*(TOP_ROW-0))), align="left")
+#db.text("wanted open-source design", (M+(U*(-0.175)), M+(U*(TOP_ROW-2))), align="left")
+#db.text("one hundred years ago,", (M+(U*(-0.175)), M+(U*(TOP_ROW-4))), align="left")
+#db.text("but back then it wasn’t possible.", (M+(U*(-0.175)), M+(U*(TOP_ROW-6))), align="left")
+
+db.stroke(None)
+SIZE = 105
+OPSZ = 144
+db.fontVariations(opsz=OPSZ)
+db.fontSize(SIZE)
+db.lineHeight(SIZE*1)
 db.fill(0.75)
-TOP_ROW = 58
-db.text("abcdefghijklmnopq", (M+(U*1), M+(U*(TOP_ROW-0))), align="left")
-db.text("rstuvwxyzß.,:;-–—!?", (M+(U*1), M+(U*(TOP_ROW-7))), align="left")
-db.text("ABCDEFGHIJKLMN", (M+(U*1), M+(U*(TOP_ROW-14))), align="left")
-db.text("OPQRSTUVWXYZ&", (M+(U*1), M+(U*(TOP_ROW-21))), align="left")
-db.text("1234567890₿$¢€¥", (M+(U*1), M+(U*(TOP_ROW-28))), align="left")
-db.text("ÁĂÂÄÀĀÅÃĄÆØŁ", (M+(U*1), M+(U*(TOP_ROW-35))), align="left")
-db.text("áăâäàāåãąæðęøœ", (M+(U*1), M+(U*(TOP_ROW-42))), align="left")
-db.text("(){}[]¡¿¶|/\\©®™«»", (M+(U*1), M+(U*(TOP_ROW-49))), align="left")
-db.text("+−×÷=<>§@%#*^", (M+(U*1), M+(U*(TOP_ROW-56))), align="left")
-#db.text("£ÇĐÐĘĦĮĽŁẞ", (M+(U*0), M+(U*12)), align="left")
-#db.text("ŊØŒÞŞẞßŲŒ", (M+(U*0), M+(U*12)), align="left")
-#db.text("ąæçďđðęģ", (M+(U*0), M+(U*12)), align="left")
-#db.text("#‚“„”‘'’\"", (M+(U*0), M+(U*12)), align="left")
-#db.text("øœ~°·•", (M+(U*0), M+(U*12)), align="left")
+LONG_TEXT_001 = "“I think true modernists wanted open-source design one hundred years ago, but back then it wasn’t possible. One of modernism’s core flaws was the huge amount of power that ended up in the hands of a few big firms. The movment was supposed to be about the democratization of design—that was their big idea—but somewhere along the line it became nothing more than an aesthetic.”"
+db.textBox(LONG_TEXT_001,(M+(U*0),M+(U*0), U*32, U*32), align="left")
+db.text(f"Rena Bold Pre-Alpha: Optical Size {OPSZ}", (M+(U*(0)), M+(U*(0))), align="left")
+
+
+#db.fontSize(194/4)
+#db.text("SIL Open Font License (OFL) version 1.1", (M+(U*(6)), M+(U*(TOP_ROW-8))), align="left")
+
+
 
 db.saveImage(args.output)
 print("DrawBot: Done\n")
