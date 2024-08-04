@@ -109,7 +109,7 @@ db.strokeWidth(12)
 db.stroke(0.9, 0.05, 0.0)
 db.rect(W/4,H/4,W/2,H/2)
 db.stroke(None)
-db.fill(0.75)
+db.fill(0.85)
 TOP_ROW = 16
 db.text("MAKE MODERNISM", (M+(U*(0.65)), M+(U*(TOP_ROW-0))), align="left")
 db.text("EGALITARIAN AGAIN", (M+(U*(-0.175)), M+(U*(TOP_ROW-3))), align="left")
