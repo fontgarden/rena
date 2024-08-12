@@ -1,2 +1,2 @@
-python documentation/animation/pre-alpha/wip-006/wip-006.py --output documentation/animation/pre-alpha/wip-006/wip-006.mp4
-open documentation/animation/pre-alpha/wip-006/wip-006.mp4
+python documentation/images/pre-alpha/wip-010.py --output documentation/images/pre-alpha/wip-010.png
+open documentation/images/pre-alpha/wip-010.png
